@@ -1,0 +1,19 @@
+{
+  "name": "@infinumjs/cra-starter",
+  "version": "0.0.2",
+  "description": "Infinum CRA project starter",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "@infinumjs/cra-starter": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinum/js-cra-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infinum/js-cra-starter/issues"
+  },
+  "homepage": "https://github.com/infinum/js-cra-starter#readme",
+  "author": "Infinum <javascript.team@infinum.co>"
+}
