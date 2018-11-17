@@ -1,11 +1,11 @@
 {
   "name": "@infinumjs/cra-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Infinum CRA project starter",
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "@infinumjs/cra-starter": "./index.js"
+    "infinum-cra": "./index.js"
   },
   "repository": {
     "type": "git",
