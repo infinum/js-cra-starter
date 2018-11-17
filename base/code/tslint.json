@@ -1,0 +1,14 @@
+{
+  "extends": "@infinumjs/tslint-config-react",
+  "rules": {
+    "no-reserved-keywords": false,
+    "react-this-binding-issue": false,
+    "no-void-expression": false,
+    "completed-docs": false,
+    "match-default-export-name": false,
+    "no-unsafe-any": false,
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false,
+    "no-import-side-effect": false
+  }
+}

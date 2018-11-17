@@ -1,0 +1,52 @@
+{
+  "dependencies": [
+    "mobx@4",
+    "mobx-react",
+    "datx",
+    "decko",
+    "emotion"
+  ],
+  "devDependencies": [
+    "husky",
+    "@infinumjs/tslint-config-react",
+    "lint-staged",
+    "tslint"
+  ],
+  "files": {
+    "move": {
+      "src/App.test.tsx": "src/containers/App.test.tsx",
+      "src/App.tsx": "src/containers/App.tsx",
+      "src/logo.svg": "src/assets/logo.svg"
+    },
+    "remove": [
+      "src/App.css"
+    ],
+    "copy": {
+      "code": "."
+    },
+    "merge": {
+      "tsconfig.json": {
+        "compilerOptions": {
+          "experimentalDecorators": true,
+          "lib": [
+            "es2015",
+            "dom"
+          ]
+        }
+      },
+      "package.json": {
+        "scripts": {
+          "precommit": "lint-staged && CI=true yarn test"
+        },
+        "lint-staged": {
+          "**/*.ts": [
+            "tslint"
+          ],
+          "**/*.tsx": [
+            "tslint"
+          ]
+        }
+      }
+    }
+  }
+}

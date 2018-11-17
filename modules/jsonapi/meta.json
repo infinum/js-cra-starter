@@ -1,0 +1,18 @@
+{
+  "dependencies": [
+    "datx-jsonapi",
+    "lodash",
+    "whatwg-fetch"
+  ],
+  "devDependencies": [
+    "@types/lodash"
+  ],
+  "files": {
+    "remove": [
+      "src/utils/.gitkeep"
+    ],
+    "copy": {
+      "code": "src"
+    }
+  }
+}

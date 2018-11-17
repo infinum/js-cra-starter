@@ -1,10 +1,8 @@
 # Infinum CRA starter
 
-`npx @infinumjs/cra-starter <projectName>`
+`npx @infinumjs/cra-starter [modules] <projectName>`
 
-## TODO
+## Modules
 
-* Better sample files
-  * Fix linter errors
-* JSON API option
-* Storybook
+* `--jsonapi` - Set up the network stack and `datx-jsonapi`
+* `--storybook` - Set up the storybook
