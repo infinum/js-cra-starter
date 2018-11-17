@@ -4,12 +4,14 @@
 [![Dependency Status](https://david-dm.org/infinum/js-cra-starter.svg)](https://david-dm.org/infinum/js-cra-starter)
 [![devDependency Status](https://david-dm.org/infinum/js-cra-starter/dev-status.svg)](https://david-dm.org/infinum/js-cra-starter#info=devDependencies)
 
+## Usage
+
 `npx @infinumjs/cra-starter [modules] <projectName>`
 
-## Modules
+### Modules
 
-* `--jsonapi` - Set up the network stack and `datx-jsonapi`
-* `--storybook` - Set up the storybook
+* `--jsonapi`, `-j` - Set up the network stack and [`datx-jsonapi`](https://github.com/infinum/datx#mixins)
+* `--storybook`, `-s` - Set up the [storybook](https://storybook.js.org/)
 
 ## License
 
