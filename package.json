@@ -26,12 +26,12 @@
     "commander": "^2.19.0",
     "fs-extra": "^7.0.1",
     "lodash": "^4.17.11",
-    "progress": "^2.0.1"
+    "progress": "^2.0.3"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/fs-extra": "^5.0.4",
-    "@types/lodash": "^4.14.118",
-    "@types/progress": "^2.0.1"
+    "@types/lodash": "^4.14.119",
+    "@types/progress": "^2.0.3"
   }
 }
