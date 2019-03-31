@@ -5,12 +5,4 @@ export class User extends Model {
 
   @prop
   public name!: string;
-
-  // Workaround for a babel issue (feature?)
-  constructor(data?: IRawModel, collection?: PureCollection) {
-    super(data, collection);
-    if (data) {
-      this.update(data);
-    }
-  }
 }
