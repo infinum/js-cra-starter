@@ -1,4 +1,4 @@
-import { IRawModel, Model, prop, PureCollection } from 'datx';
+import { Model, prop } from 'datx';
 
 export class User extends Model {
   public static type = 'user';

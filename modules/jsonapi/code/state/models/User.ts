@@ -1,4 +1,4 @@
-import { IRawModel, Model, prop, PureCollection } from 'datx';
+import { Model, prop } from 'datx';
 import { jsonapi } from 'datx-jsonapi';
 
 export class User extends jsonapi(Model) {
