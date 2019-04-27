@@ -22,6 +22,11 @@
       "email": "darko@infinum.co"
     }
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "rm -rf sample-project; node ./index.js sample-project -j -s; git add sample-project"
+    }
+  },
   "dependencies": {
     "commander": "^2.20.0",
     "fs-extra": "^7.0.1",
@@ -32,6 +37,7 @@
     "@types/commander": "^2.12.2",
     "@types/fs-extra": "^5.0.5",
     "@types/lodash": "^4.14.123",
-    "@types/progress": "^2.0.3"
+    "@types/progress": "^2.0.3",
+    "husky": "^2.1.0"
   }
 }
