@@ -82,6 +82,13 @@ module.exports = async (projectName, program) => {
           label: `Merging some ${activeModule} files`,
         });
       }
+      if ('exec' in metaData) {
+        cmdActions.push({
+          cmd: 'exec',
+          params: [metaData.exec, projectPath],
+          label: `Executing ${metaData.exec}`,
+        });
+      }
     }
   }
 

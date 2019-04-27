@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["jsx-a11y"],
+  "rules": {
+    "react/jsx-max-depth": [1, { "max": 5 }],
+    "react/jsx-no-bind": [1, {
+      "ignoreRefs": false,
+      "allowArrowFunctions": false,
+      "allowBind": false
+    }],
+    "react/prefer-stateless-function": 1,
+    "no-eq-null": 1,
+    "no-console": 1,
+    "no-use-before-define": 1
+  },
+  "overrides": [
+    {
+      "files": ["src/serviceWorker.ts"],
+      "rules": {
+        "no-eq-null": 0,
+        "no-console": 0,
+        "no-use-before-define": 0
+      }
+    }
+  ]
+}

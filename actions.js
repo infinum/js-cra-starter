@@ -23,7 +23,7 @@ module.exports = {
   },
 
   async installDeps(deps, isDev, projectName) {
-    await exec(`yarn add ${isDev? '-D' : ''} ${deps.join(' ')}`, {cwd: projectName});
+    await exec(`npm install ${isDev? '-D' : ''} ${deps.join(' ')}`, {cwd: projectName});
   },
 
   async mergeFiles(files, projectPath) {
@@ -53,7 +53,7 @@ module.exports = {
     }
   },
 
-  async filesAppend(files, projectPath, activeModule) {
+  async filesAppend(files, projectPath, _activeModule) {
     const fileList = Object.keys(files);
     for (let file of fileList) {
       const dest = path.join(projectPath, file);
@@ -71,5 +71,9 @@ module.exports = {
       const source = path.join(__dirname, activeModule, file);
       await fs.copy(source, dest);
     }
+  },
+
+  async exec(cmd, projectName) {
+    return exec(cmd, {cwd: projectName});
   }
 };

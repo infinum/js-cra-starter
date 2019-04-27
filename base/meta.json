@@ -7,7 +7,9 @@
     "emotion"
   ],
   "devDependencies": [
-    "husky"
+    "husky",
+    "prettier",
+    "eslint-config-prettier"
   ],
   "files": {
     "move": {
@@ -32,9 +34,12 @@
         }
       },
       "package.json": {
+        "scripts": {
+          "lint": "prettier --check **/*.{ts,tsx} !dist/** && eslint **/*.{ts,tsx}"
+        },
         "husky": {
           "hooks": {
-            "pre-commit": "CI=true yarn test"
+            "pre-commit": "npm run lint && CI=true yarn test"
           }
         },
         "browserslist": {
@@ -51,5 +56,6 @@
         }
       }
     }
-  }
+  },
+  "exec": "./node_modules/.bin/prettier --write **/*.{ts,tsx}"
 }
