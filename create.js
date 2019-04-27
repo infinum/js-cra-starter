@@ -91,6 +91,11 @@ module.exports = async (projectName, program) => {
       }
     }
   }
+  cmdActions.push({
+    cmd: 'exec',
+    params: ['git add . && git commit -m "Project setup"', projectPath],
+    label: 'Committing changes',
+  })
 
   const bar = new ProgressBar('[:bar] :current/:total: :action', {
     total: cmdActions.length,
