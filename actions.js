@@ -19,7 +19,7 @@ function exec(command, options = {}) {
 
 module.exports = {
   async initCra(projectName) {
-    await exec(`npx create-react-app ${projectName} --typescript`);
+    await exec(`npx create-react-app ${projectName} --typescript --use-npm`);
   },
 
   async installDeps(deps, isDev, projectName) {
