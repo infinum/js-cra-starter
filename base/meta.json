@@ -36,6 +36,18 @@
           "hooks": {
             "pre-commit": "CI=true yarn test"
           }
+        },
+        "browserslist": {
+          "production": [
+            ">0.5%",
+            "last 2 chrome version",
+            "last 2 firefox version",
+            "last 2 safari version",
+            "last 2 edge version",
+            "ie 11",
+            "not dead",
+            "not op_mini all"
+          ]
         }
       }
     }
