@@ -7,10 +7,7 @@
     "emotion"
   ],
   "devDependencies": [
-    "husky",
-    "@infinumjs/tslint-config-react",
-    "lint-staged",
-    "tslint"
+    "husky"
   ],
   "files": {
     "move": {
@@ -35,16 +32,10 @@
         }
       },
       "package.json": {
-        "scripts": {
-          "precommit": "lint-staged && CI=true yarn test"
-        },
-        "lint-staged": {
-          "**/*.ts": [
-            "tslint"
-          ],
-          "**/*.tsx": [
-            "tslint"
-          ]
+        "husky": {
+          "hooks": {
+            "pre-commit": "CI=true yarn test"
+          }
         }
       }
     }
