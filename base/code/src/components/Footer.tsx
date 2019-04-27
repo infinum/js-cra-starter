@@ -1,15 +1,5 @@
 import * as React from 'react';
 
-export class Footer extends React.Component<{
-  className?: string;
-}> {
-  public render() {
-    const { className } = this.props;
-
-    return (
-      <div className={className}>
-        Made with ❤️by Infinum
-      </div>
-    );
-  }
-}
+export const Footer: React.FC<{ className?: string }> = ({ className }) => (
+  <div className={className}>Made with ❤️by Infinum</div>
+);
