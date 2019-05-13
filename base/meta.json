@@ -8,9 +8,8 @@
   ],
   "devDependencies": [
     "husky",
-    "@infinumjs/tslint-config-react",
-    "lint-staged",
-    "tslint"
+    "prettier",
+    "eslint-config-prettier"
   ],
   "files": {
     "move": {
@@ -36,17 +35,27 @@
       },
       "package.json": {
         "scripts": {
-          "precommit": "lint-staged && CI=true yarn test"
+          "lint": "prettier --check **/*.{ts,tsx} !dist/** && eslint **/*.{ts,tsx}"
         },
-        "lint-staged": {
-          "**/*.ts": [
-            "tslint"
-          ],
-          "**/*.tsx": [
-            "tslint"
+        "husky": {
+          "hooks": {
+            "pre-commit": "npm run lint && CI=true yarn test"
+          }
+        },
+        "browserslist": {
+          "production": [
+            ">0.5%",
+            "last 2 chrome version",
+            "last 2 firefox version",
+            "last 2 safari version",
+            "last 2 edge version",
+            "ie 11",
+            "not dead",
+            "not op_mini all"
           ]
         }
       }
     }
-  }
+  },
+  "exec": "./node_modules/.bin/prettier --write **/*.{ts,tsx}"
 }

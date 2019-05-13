@@ -1,16 +1,13 @@
 {
   "devDependencies": [
-    "@storybook/addon-actions",
-    "@storybook/addon-knobs",
-    "@storybook/addon-links",
-    "@storybook/addon-options",
-    "@storybook/addon-viewport",
-    "@storybook/addons",
-    "@storybook/react",
-    "@types/storybook__addon-options",
-    "@types/storybook__react",
-    "babel-loader",
-    "ts-loader"
+    "@storybook/addon-actions@5",
+    "@storybook/addon-knobs@5",
+    "@storybook/addon-links@5",
+    "@storybook/addon-viewport@5",
+    "@storybook/addons@5",
+    "@storybook/react@5",
+    "@types/storybook__react@4",
+    "babel-loader"
   ],
   "files": {
     "append": {

@@ -1,0 +1,71 @@
+{
+  "name": "sample-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.8",
+    "@types/react": "16.8.14",
+    "@types/react-dom": "16.8.4",
+    "datx": "^1.0.1",
+    "datx-jsonapi": "^1.0.1",
+    "decko": "^1.2.0",
+    "emotion": "^10.0.9",
+    "lodash": "^4.17.11",
+    "mobx": "^4.9.4",
+    "mobx-react": "^5.4.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.0",
+    "typescript": "3.4.5",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "prettier --check **/*.{ts,tsx} !dist/** && eslint **/*.{ts,tsx}",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version",
+      "last 2 edge version",
+      "ie 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-knobs": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addon-viewport": "^5.0.10",
+    "@storybook/addons": "^5.0.10",
+    "@storybook/react": "^5.0.10",
+    "@types/lodash": "^4.14.123",
+    "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint-config-prettier": "^4.2.0",
+    "husky": "^2.1.0",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && CI=true yarn test"
+    }
+  }
+}
