@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/cra-starter",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Infinum CRA project starter",
   "main": "index.js",
   "license": "MIT",
