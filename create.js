@@ -35,14 +35,14 @@ module.exports = async (projectName, program) => {
     if ('dependencies' in metaData) {
       cmdActions.push({
         cmd: 'installDeps',
-        params: [metaData.dependencies, false, projectName],
+        params: [metaData.dependencies, false, projectName, program.exclude],
         label: `Installing ${activeModule} dependencies`,
       });
     }
     if ('devDependencies' in metaData) {
       cmdActions.push({
         cmd: 'installDeps',
-        params: [metaData.devDependencies, true, projectName],
+        params: [metaData.devDependencies, true, projectName, program.exclude],
         label: `Installing ${activeModule} dev dependencies`,
       });
     }
@@ -93,9 +93,17 @@ module.exports = async (projectName, program) => {
   }
   cmdActions.push({
     cmd: 'exec',
-    params: ['git add . && git commit -m "Project setup"', projectPath],
-    label: 'Committing changes',
+    params: ["./node_modules/.bin/prettier --write \"**/*.{ts,tsx}\"", projectPath],
+    label: 'Prettifying code'
   })
+
+  if(program.commit) {
+    cmdActions.push({
+      cmd: 'exec',
+      params: ['git add . && git commit -m "Project setup"', projectPath],
+      label: 'Committing changes',
+    })
+  }
 
   const bar = new ProgressBar('[:bar] :current/:total: :action', {
     total: cmdActions.length,

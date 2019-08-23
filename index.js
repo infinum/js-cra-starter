@@ -10,6 +10,10 @@ const create = require('./create');
 
 let projectName;
 
+function commaSeparatedList(value, dummyPrevious) {
+  return value.split(',');
+}
+
 program
   .version(app.version, '-v, --version')
   .arguments('<projectName>')
@@ -18,6 +22,8 @@ program
   })
   .option('-j, --jsonapi', 'Add json:api support')
   .option('-s, --storybook', 'Add storybook support')
+  .option('-e, --exclude [dependency]', 'Exclude dependencies from the generated project', commaSeparatedList)
+  .option('--no-commit', 'Don\'t automatically commit the generated project')
   .parse(process.argv);
 
 create(projectName, program).then(
