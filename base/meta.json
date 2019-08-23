@@ -56,6 +56,5 @@
         }
       }
     }
-  },
-  "exec": "./node_modules/.bin/prettier --write **/*.{ts,tsx}"
+  }
 }
