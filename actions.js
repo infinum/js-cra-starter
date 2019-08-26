@@ -22,8 +22,8 @@ module.exports = {
     await exec(`npx create-react-app ${projectName} --typescript --use-npm`);
   },
 
-  async installDeps(deps, isDev, projectName) {
-    await exec(`npm install ${isDev? '-D' : ''} ${deps.join(' ')}`, {cwd: projectName});
+  async installDeps(deps, isDev, projectName, exclude = []) {
+    await exec(`npm install ${isDev? '-D' : ''} ${deps.filter(dep => !exclude.includes(dep)).join(' ')}`, {cwd: projectName});
   },
 
   async mergeFiles(files, projectPath) {

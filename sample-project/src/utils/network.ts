@@ -16,7 +16,7 @@ config.defaultFetchOptions = {
 };
 
 config.transformResponse = (opts: IRawResponse) => {
-  return {...opts, data: deapify(opts.data)};
+  return { ...opts, data: deapify(opts.data) };
 };
 
 config.transformRequest = (opts: ICollectionFetchOpts) => {
@@ -27,5 +27,5 @@ config.transformRequest = (opts: ICollectionFetchOpts) => {
     opts.options = {};
   }
 
-  return {...opts, data: apify(opts.data)};
+  return { ...opts, data: apify(opts.data) };
 };

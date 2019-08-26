@@ -35,7 +35,7 @@
       },
       "package.json": {
         "scripts": {
-          "lint": "prettier --check **/*.{ts,tsx} !dist/** && eslint **/*.{ts,tsx}"
+          "lint": "prettier --check \"**/*.{ts,tsx}\" \"!dist/**\" && eslint \"**/*.{ts,tsx}\""
         },
         "husky": {
           "hooks": {
@@ -56,6 +56,5 @@
         }
       }
     }
-  },
-  "exec": "./node_modules/.bin/prettier --write **/*.{ts,tsx}"
+  }
 }

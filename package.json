@@ -24,7 +24,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "rm -rf sample-project; node ./index.js sample-project -j -s; git add sample-project"
+      "pre-commit": "rm -rf sample-project; node ./index.js sample-project -j -s --exclude husky --no-commit; git add sample-project"
     }
   },
   "dependencies": {
