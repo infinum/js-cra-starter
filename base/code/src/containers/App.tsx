@@ -1,5 +1,5 @@
 import { css, keyframes } from 'emotion';
-import React, { FunctionComponent, useState } from 'react';
+import * as React from 'react';
 
 import logo from '../assets/logo.svg';
 import { Footer } from '../components/Footer';
@@ -52,8 +52,8 @@ const footerClass = css`
   font-size: 16px;
 `;
 
-export const App: FunctionComponent<{}> = () => {
-  const [animationSpeed, setAnimationSpeed] = useState(40);
+export const App: React.FC<{}> = () => {
+  const [animationSpeed, setAnimationSpeed] = React.useState(40);
 
   const onButtonClick = (action: string) => {
     return () => {
