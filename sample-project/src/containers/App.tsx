@@ -18,9 +18,14 @@ const appClass = css`
   text-align: center;
 `;
 
-const logoClass = (animationSpeed: boolean) => css`
+const logoClass = (animationSpeed: number) => css`
   animation: ${logoSpinKeyframes} infinite ${animationSpeed}s linear;
   height: 30vmin;
+`;
+
+const buttonClass = css`
+  padding: 10px;
+  margin: 5px;
 `;
 
 const headerClass = css`
@@ -44,14 +49,14 @@ const footerClass = css`
 `;
 
 export const App: FunctionComponent<{}> = () => {
-  const [animationSpeed, setAnimationSpeed] = useState(20);
+  const [animationSpeed, setAnimationSpeed] = useState(40);
 
-  const onButtonClick = (action) => {
+  const onButtonClick = (action: string) => {
     return () => {
-      if (action === '+') {
-        setAnimationSpeed(animationSpeed + 5);
-      } else if (animationSpeed >= 0 && action === '-') {
+      if (action === '+' && animationSpeed >= 5) {
         setAnimationSpeed(animationSpeed - 5);
+      } else if (action === '-') {
+        setAnimationSpeed(animationSpeed + 5);
       }
     };
   };
@@ -65,8 +70,14 @@ export const App: FunctionComponent<{}> = () => {
         </p>
         <div>
           <span>ANIMATION SPEED</span>
-          <button onClick={onButtonClick('+')}>+</button>
-          <button onClick={onButtonClick('-')}>-</button>
+          <div>
+            <button className={buttonClass} onClick={onButtonClick('+')}>
+              +
+            </button>
+            <button className={buttonClass} onClick={onButtonClick('-')}>
+              -
+            </button>
+          </div>
         </div>
         <a className={linkClass} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
