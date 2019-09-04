@@ -28,6 +28,10 @@ const buttonClass = css`
   margin: 5px;
 `;
 
+const stateContaninerClass = css`
+  margin: 40px 0;
+`;
+
 const headerClass = css`
   background-color: ${BACKGROUND_PRIMARY};
   min-height: 100vh;
@@ -53,7 +57,7 @@ export const App: FunctionComponent<{}> = () => {
 
   const onButtonClick = (action: string) => {
     return () => {
-      if (action === '+' && animationSpeed >= 5) {
+      if (action === '+' && animationSpeed > 5) {
         setAnimationSpeed(animationSpeed - 5);
       } else if (action === '-') {
         setAnimationSpeed(animationSpeed + 5);
@@ -68,7 +72,7 @@ export const App: FunctionComponent<{}> = () => {
         <p>
           Edit <code>src/containers/App.tsx</code> and save to reload.
         </p>
-        <div>
+        <div className={stateContaninerClass}>
           <span>ANIMATION SPEED</span>
           <div>
             <button className={buttonClass} onClick={onButtonClick('+')}>
