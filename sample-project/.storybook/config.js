@@ -1,5 +1,7 @@
 import { configure } from '@storybook/react';
 
+import '../src/index.css';
+
 const reqComponents = require.context('../src/components', true, /stories\.(j|t)s(x?)$/);
 const reqContainers = require.context('../src/containers', true, /stories\.(j|t)s(x?)$/);
 
