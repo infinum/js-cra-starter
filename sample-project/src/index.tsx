@@ -1,11 +1,9 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import 'whatwg-fetch';
 
 import { App } from './containers/App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import './utils/network';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
