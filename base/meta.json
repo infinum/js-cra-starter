@@ -10,7 +10,10 @@
   "devDependencies": [
     "husky",
     "prettier",
-    "eslint-config-prettier"
+    "eslint-config-prettier",
+    "react-test-renderer",
+    "@types/jest",
+    "@types/react-test-renderer"
   ],
   "files": {
     "move": {
