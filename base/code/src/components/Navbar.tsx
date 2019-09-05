@@ -1,6 +1,6 @@
 import { css } from 'emotion';
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import { LINK_COLOR } from '../consts/colors';
 
 const navbarClass = css`
@@ -26,14 +26,11 @@ const activeLink = css`
 `;
 
 export const Navbar: React.FC<{}> = () => {
+
   return (
     <nav className={navbarClass}>
-      <NavLink exact to="/" className={navigationLink} activeClassName={activeLink}>
-        HOME
-      </NavLink>
-      <NavLink to="/about" className={navigationLink} activeClassName={activeLink}>
-        ABOUT
-      </NavLink>
+      <NavLink exact to="/" className={navigationLink} activeClassName={activeLink}>HOME</NavLink>
+      <NavLink to="/about" className={navigationLink} activeClassName={activeLink}>ABOUT</NavLink>
     </nav>
   );
 };

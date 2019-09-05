@@ -11,6 +11,8 @@ const Home = React.lazy(() => import('./Home'));
 const About = React.lazy(() => import('./About'));
 
 const appClass = css`
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background-color: ${BACKGROUND_PRIMARY};
   min-height: 100vh;
