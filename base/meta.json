@@ -9,8 +9,7 @@
   "devDependencies": [
     "husky",
     "prettier",
-    "eslint-config-prettier",
-    "@types/storybook__react"
+    "eslint-config-prettier"
   ],
   "files": {
     "move": {
