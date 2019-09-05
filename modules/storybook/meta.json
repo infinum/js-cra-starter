@@ -6,7 +6,10 @@
     "@storybook/addon-viewport@5",
     "@storybook/addons@5",
     "@storybook/react@5",
-    "@types/storybook__react@4",
+    "@types/storybook__react",
+    "@types/storybook__addon-knobs",
+    "@types/storybook__addon-actions",
+    "@types/storybook__addon-links",
     "babel-loader"
   ],
   "files": {
