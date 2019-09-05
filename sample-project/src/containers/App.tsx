@@ -7,8 +7,8 @@ import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { BACKGROUND_PRIMARY } from '../consts/colors';
 
-const Home = React.lazy(() => import('./'));
-const About = React.lazy(() => import('./'));
+const Home = React.lazy(() => import('./Home'));
+const About = React.lazy(() => import('./About'));
 
 const appClass = css`
   text-align: center;

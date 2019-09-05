@@ -1,7 +1,6 @@
 import { Model, prop } from 'datx';
-import { jsonapi } from 'datx-jsonapi';
 
-export class User extends jsonapi(Model) {
+export class User extends Model {
   public static type = 'user';
 
   @prop
