@@ -5,12 +5,15 @@
     "datx",
     "decko",
     "emotion",
-    "react-use"
+    "react-use",
+    "react-router-dom"
   ],
   "devDependencies": [
     "husky",
     "prettier",
-    "eslint-config-prettier"
+    "eslint-config-prettier",
+    "@types/react-router-dom",
+    "@types/react-router"
   ],
   "files": {
     "move": {
